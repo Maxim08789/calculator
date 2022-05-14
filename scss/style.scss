@@ -1,0 +1,150 @@
+//Файл обнуляющих стилей
+@import "nullstyle.scss";
+
+//Миксины
+@import "mixin.scss";
+
+.container {
+	max-width: 100%;
+	padding: 0 10px;
+	position: relative;
+	margin: 0 auto;
+}
+body {
+	background-color: rgb(31, 31, 31);
+	padding: 50px 20px 20px 10px;
+	color: #fff;
+}
+
+.title-1 {
+	@include remFz(25);
+	@include remLh(30);
+	@include remM(0, 0, 15, 0);
+}
+.calculator {
+	// .calculator__body
+
+	&__body {
+		display: flex;
+		flex-direction: column;
+	}
+
+	// .calculator__title
+
+	&__title {
+		@include remFz(50);
+		@include remLh(60);
+		color: rgb(252, 50, 50);
+		@include remM(0, 0, 60, 0);
+		text-align: center;
+		text-transform: uppercase;
+	}
+
+	// .calculator__blocks
+
+	&__blocks {
+		display: flex;
+		@include remM(0, 0, 70, 0);
+	}
+
+	// .calculator__block
+
+	&__block {
+		margin: 0px 50px 0px 0px;
+		display: flex;
+		flex-direction: column;
+		&:last-child {
+			margin: 0;
+		}
+		&:nth-child(3) {
+			justify-content: space-between;
+			& .calculator__block-title {
+				margin: 0;
+			}
+			input {
+				background-color: transparent;
+				color: #fff;
+				@include remFz(60);
+				@include remLh(80);
+				color: rgb(227, 217, 27);
+				font-weight: 700;
+			}
+		}
+	}
+
+	// .calculator__block-title
+
+	&__block-title {
+	}
+
+	// .calculator__input
+
+	&__input {
+		@include remFz(30);
+		padding: 10px 15px;
+		@include remM(0, 0, 50, 0);
+		font-weight: 600;
+		&:last-child {
+			margin: 0;
+		}
+	}
+
+	// .calculator__percents
+
+	&__percents {
+		@include remM(0, 0, 50, 0);
+		input {
+			width: 500px;
+			@include remM(0, 0, 20, 0);
+		}
+		div {
+			display: flex;
+			align-items: center;
+			@include remFz(20);
+			@include remLh(30);
+			span {
+				@include remFz(40);
+				@include remLh(50);
+				margin: 0px 10px 0px 0px;
+			}
+		}
+	}
+
+	// .calculator__percents-title
+
+	&__percents-title {
+	}
+
+	// .calculator__result
+
+	&__result {
+		display: flex;
+	}
+
+	&__result-item {
+		display: flex;
+		align-items: center;
+		input {
+			color: rgb(255, 242, 0);
+			@include remFz(30);
+			@include remLh(40);
+			background-color: transparent;
+			width: auto;
+		}
+		&:last-child {
+			& .calculator__result-title {
+				color: rgb(255, 0, 0);
+			}
+			input {
+				color: rgb(255, 0, 0);
+			}
+		}
+	}
+
+	// .calculator__result-title
+
+	&__result-title {
+		color: rgb(255, 242, 0);
+		@include remM(0, 20, 0, 0);
+	}
+}

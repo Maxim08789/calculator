@@ -1,0 +1,40 @@
+///Миксин адаптивного шрифта ( в пикселях):
+
+//ширина макета
+$maxWidth: 1667;
+//миксин
+@mixin af($pcSize, $mobSize) {
+	$addSize: $pcSize - $mobSize;
+	$maxWidth: $maxWidth - 320;
+	font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}));
+}
+
+///Миксины перевода в rem
+//fz
+@mixin remFz($meaning) {
+	$rezult: $meaning / 16;
+	font-size: $rezult + rem;
+}
+//lh
+@mixin remLh($meaning) {
+	$rezult: $meaning / 16;
+	line-height: $rezult + rem;
+}
+//margin
+@mixin remM($m1, $m2, $m3, $m4) {
+	$r1: $m1 / 16;
+	$r2: $m2 / 16;
+	$r3: $m3 / 16;
+	$r4: $m4 / 16;
+	$oR: ($r1 + rem) ($r2 + rem) ($r3 + rem) ($r4 + rem);
+	margin: $oR;
+}
+//padding
+@mixin remP($p1, $p2, $p3, $p4) {
+	$r1: $p1 / 16;
+	$r2: $p2 / 16;
+	$r3: $p3 / 16;
+	$r4: $p4 / 16;
+	$oR: ($r1 + rem) ($r2 + rem) ($r3 + rem) ($r4 + rem);
+	padding: $oR;
+}

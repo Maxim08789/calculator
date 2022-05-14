@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<!--    Подключение файла со стилями     -->
+	<link rel="stylesheet" href="css/style.css">
+	<!----------------------------------------->
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>калькулятор</title>
+</head>
+
+<body>
+	<section class="calculator">
+		<div class='container'>
+			<div class="calculator__body">
+				<h1 class="calculator__title">Калькулятор</h1>
+				<div class="calculator__blocks">
+					<div class="calculator__block">
+						<h3 class="calculator__block-title title-1">Доход в месяц</h3>
+						<input id="d-1" placeholder="зарплата" type="number" class="calculator__input">
+						<input id="d-2" placeholder="стипендия" type="number" class="calculator__input">
+						<input id="d-3" placeholder="доп. доход" type="number" class="calculator__input">
+						<input id="d-4" placeholder="доп. доход" type="number" class="calculator__input">
+					</div>
+					<div class="calculator__block">
+						<h3 class="calculator__block-title title-1">Расходы в месяц</h3>
+						<input id="r-1" placeholder="квартира" type="number" class="calculator__input">
+						<input id="r-2" placeholder="кредит" type="number" class="calculator__input">
+						<input id="r-3" placeholder="доп. расход" type="number" class="calculator__input">
+						<input id="r-4" placeholder="доп. расход" type="number" class="calculator__input">
+					</div>
+					<div class="calculator__block">
+						<h3 class="calculator__block-title title-1">Доступно в месяц:</h3>
+						<input value="0" type="number" readonly id="title-mounth">
+						<h3 class="calculator__block-title title-1">Доступно в день:</h3>
+						<input value="0" type="number" readonly id="title-day">
+						<h3 class="calculator__block-title title-1">Накопим за год:</h3>
+						<input value="0" type="number" readonly id="title-year">
+					</div>
+				</div>
+				<div class="calculator__percents">
+					<h3 class="calculator__percents-title title-1">Копилка (сколько откладываем?)</h3>
+					<input type="range" min="0" max="100" value="0" id="money-box-range">
+					<div><span id="total-percents">0</span>%</div>
+				</div>
+				<div class="calculator__result">
+					<div class="calculator__result-item">
+						<h3 class="calculator__result-title title-1">Копим:</h3>
+						<input type="number" readonly value="0" id="title-copim">
+					</div>
+					<div class="calculator__result-item">
+						<h3 class="calculator__result-title title-1">Тратим:</h3>
+						<input type="number" readonly value="0" id="title-tratim">
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+	<script src="js/script.js"></script>
+</body>
+
+</html>
